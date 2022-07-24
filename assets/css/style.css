@@ -1,8 +1,6 @@
 /* GOOGLE FONTES */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&display=swap');
 
-
-
 *{
     box-sizing: border-box;
 }
@@ -193,6 +191,291 @@ h1, h2, h3, h4, h5, h6 {
     color:#FFF;
     text-align: center;
     position: absolute;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/********************************************************************\
+                            ESTILOS PRINCIPALES 
+\********************************************************************/
+
+.group--color .container {
+    background: #DE423A;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.main__title{
+    margin: 15px 0;
+    font-size: 1.8em;
+    font-family: 'Pacifico', cursive; 
+    font-weight: 100;
+}
+
+.column__title{
+    font-size: 1.3em; 
+}
+
+.main__about__description .column:nth-child(2){
+    padding: 10px;
+}
+
+.btn{
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    background: #DE423A;
+    color: #fff;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.group__title{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.5em;
+    margin: 30px;
+}
+
+.today-special .column{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.today-special__img{
+    margin: auto;
+    max-width: 350px;
+}
+
+.today-special__title{
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.today-special__price{
+    font-size: 1.5em;
+    color: #DE423A;
+    font-weight:bold;
+}
+
+/********************************************************************\
+                            ESTILOS DEL FOOTER
+\********************************************************************/
+
+.main-footer{
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: .8em;
+}
+
+.copy{
+    text-align: center;
+    margin: auto;
+    margin: 15px;
+}
+
+.main-footer [class*="icon-"]{
+    color:#FFF;
+    text-decoration: none;
+}
+
+.main-footer [class*='icon-']:before{
+    position:relative;
+    top: 3px;
+    right: 5px;
+}
+
+/********************************************************************\
+                            ESTILOS RESPONSIVE
+\********************************************************************/
+@media screen and (min-width:480px){
+    .logo{
+        color:#FFF;
+    }
+    .main-header__contactInfo{
+        text-align: right;
+    }
+    .main-header__contactInfo__phone{
+        background: none;
+    }
+    .main-header__contactInfo__address{
+        color:#fff;
+    }
+    .main-nav{
+        background: rgba(0, 0, 0, 0.85);
+    }
+    .banner{
+        margin-top: -145px;
+        z-index:-1000;
+    } 
+    .banner__img{
+        height: 600px;
+    }
+    .banner__content{
+        font-size: 2em;
+    }
+
+    .main{
+        padding-bottom: 15px;
+    }
+    .main__about__description .column:nth-child(2){
+        padding-left: 20px;
+        font-size: .9em;
+    }
+    .main__about__description .btn {
+        margin: 0;
+    }
+
+    .today-special .column{
+        border:5px solid #DDD;
+        padding: 5px;
+    }  
+    .today-special__img{
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .main-footer .container--flex{
+        align-items: flex-start;
+    }
+
+    .column--50{
+        width: 49%;
+    }
+    .column--50-25{
+        width: 49%;
+    }
+    .column--33{
+        width: 32%;
+    }
+}
+
+@media screen and (min-width:768px){
+    .main__title{
+        font-size: 2.2em;
+    }
+
+    .main__about__description{
+        margin-top: 30px;
+    }
+
+    .main__about__description .column--50:nth-child(2){
+        font-size:1em;
+    }
+    .main__about__description .column--50:nth-child(2) .column__txt{
+        line-height: 30px;
+    }
+
+    .column--50-25{
+        width:24.5%;
+    }
+    .column__title{
+        font-size: 1em;
+    }
+
+    .group__title{
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .container{
+        width: 1000px;
+    }
+    .logo{
+        font-size: 2em;
+        padding: 0;
+    }
+
+    .main-header__contactInfo__phone,
+    .main-header__contactInfo__address{
+        padding-right: 0;
+        font-size: 1.15em;
+    }
+
+    .main-nav{
+        padding: 0;
+    }
+
+    .banner__img{
+        height: 700px;
+    }
+
+    .banner__content{
+        font-size:2.5em
+    }
+
+    .icon-menu{
+        display:none;
+    }
+    .menu{
+        position:static;
+        display: flex;
+        height: auto;
+        width: auto;
+    }
+
+    .menu__link{
+        padding: 20px;
+    }
+
+    .group--color .container{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .main__title{
+        font-size: 2.3em;
+    }
+
+    .main__about__description .column--50:nth-child(2) .column__txt{
+        line-height: 45px;
+    }
+
+    .today-special__title{
+        font-size: 1.4em;
+    }
+
+    .today-special__price{
+        font-size: 1.8em;
+    }
+
+    .main-footer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width:1600px){
+    .container{
+        width: 1400px;
+    }
+
+    .banner__img{
+        height: 800px;
+    }
+
+    .main__about__description .column:nth-child(1) img{
+        width: 90%;
+        height: 450px;
+        object-fit: cover;
+    }
+    .today-special__img{
+        height: 300px;
+    }
+
+    
 
 }
 
@@ -203,7 +486,6 @@ h1, h2, h3, h4, h5, h6 {
 /********************************************************************\
                             E
 \********************************************************************/
-
 
 
 
